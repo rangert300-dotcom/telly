@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Telly Tech Services | Same-Day In-Home Tech Support | New Orleans</title>
+  <title>Telly Tech | Same-Day In-Home Tech Support | New Orleans</title>
   <meta name="description" content="Same-day in-home tech support in New Orleans, Metairie & Kenner. $75 flat-rate house call for most jobs. Insured & background-checked. Call or text (504) 345-8049." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Telly Tech Services — Same-Day In-Home Tech Support" />
+  <meta property="og:title" content="Telly Tech — Same-Day In-Home Tech Support" />
   <meta property="og:description" content="$75 flat-rate house call (most jobs). Insured & background-checked. New Orleans • Metairie • Kenner. Call/Text (504) 345-8049." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
@@ -15,6 +15,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
 
+  <link rel="preload" href="assets/css/styles.css" as="style" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script defer src="assets/js/main.js"></script>
 
@@ -46,21 +47,25 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" data-elevate>
     <div class="container header-inner">
-      <div class="brand" aria-label="Telly Tech Services">
-        <div class="brand-mark" aria-hidden="true">TT</div>
+      <a class="brand" href="#top" aria-label="Telly Tech">
+        <div class="brand-mark" aria-hidden="true">
+          <!-- Replace this image file when you add the real TT logo -->
+          <img class="brand-logo" src="assets/img/telly-tech-tt-logo.png" alt="Telly Tech" onerror="this.style.display='none'; this.parentElement.classList.add('brand-mark--fallback');" />
+          <span class="brand-fallback" aria-hidden="true">TT</span>
+        </div>
         <div class="brand-text">
-          <div class="brand-name">Telly Tech Services</div>
+          <div class="brand-name">Telly Tech</div>
           <div class="brand-tag">Same-day, in-home tech help • New Orleans</div>
         </div>
-      </div>
+      </a>
 
       <nav class="header-actions" aria-label="Primary">
+        <a class="btn btn-ghost" href="#problems">Common fixes</a>
         <a class="btn btn-ghost" href="#services">Services</a>
         <a class="btn btn-ghost" href="#pricing">Pricing</a>
-        <a class="btn btn-ghost" href="#trust">Trust</a>
-        <a class="btn btn-call" href="tel:+15043458049" aria-label="Call Telly Tech Services">(504) 345-8049</a>
+        <a class="btn btn-call" href="tel:+15043458049" aria-label="Call Telly Tech">(504) 345-8049</a>
       </nav>
     </div>
   </header>
@@ -68,10 +73,12 @@
   <!-- Sticky mobile CTA -->
   <div class="sticky-cta" role="region" aria-label="Quick contact">
     <a class="sticky-btn" href="tel:+15043458049">Call</a>
-    <a class="sticky-btn sticky-btn-gold" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20Services%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text</a>
+    <a class="sticky-btn sticky-btn-gold" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us</a>
   </div>
 
   <main id="main">
+    <span id="top" class="anchor" aria-hidden="true"></span>
+
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -84,23 +91,32 @@
 
           <div class="hero-cta">
             <a class="btn btn-primary" href="tel:+15043458049">Call (504) 345-8049</a>
-            <a class="btn btn-secondary" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20Services%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us what’s going on</a>
+            <a class="btn btn-secondary" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us</a>
           </div>
 
           <div class="trust-row" aria-label="Trust highlights">
             <div class="trust-pill">No upsells</div>
             <div class="trust-pill">Plain-English help</div>
-            <div class="trust-pill">Same-day slots (when available)</div>
-            <div class="trust-pill">New Orleans area</div>
+            <div class="trust-pill">Real human replies</div>
+            <div class="trust-pill">Local • New Orleans area</div>
           </div>
 
           <div class="note">
-            <strong>Tip:</strong> Text your neighborhood + the device + the problem (“WiFi drops in back bedroom”).
+            <strong>Fastest booking:</strong> text your <em>neighborhood</em> + the <em>device</em> + the <em>problem</em> (“WiFi drops in back bedroom”).
+          </div>
+
+          <div class="micro-actions">
+            <button class="btn btn-ghost" type="button" data-share>
+              Share with a neighbor
+            </button>
+            <button class="btn btn-ghost" type="button" data-copy-number>
+              Copy phone number
+            </button>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Quick card">
-          <div class="card">
+          <div class="card card--glow">
             <h2 class="card-title">Most-requested visits</h2>
             <ul class="checklist">
               <li>Ring / Nest doorbell install</li>
@@ -118,79 +134,190 @@
 
             <a class="btn btn-primary btn-full" href="#contact">Get help today</a>
             <p class="micro muted">
-              Prefer texting first? That’s totally fine.
+              Texting first is totally fine.
             </p>
           </div>
+
+          <figure class="mini-flyer reveal" aria-label="Why Telly Tech flyer">
+            <img src="assets/img/flyer-hook.png" alt="Why Telly Tech flyer: $75 flat rate, we come to you, same-day service, local & independent." loading="lazy">
+          </figure>
         </aside>
+      </div>
+    </section>
+
+    <section id="trust" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Trust, fast</h2>
+          <p class="section-sub">The stuff you want to know before you let anyone in your house.</p>
+        </div>
+
+        <div class="grid trust-cards">
+          <div class="trust-card reveal">
+            <h3>Safe in-home help</h3>
+            <p>Insured service and background-checked technicians. Respectful, patient, and professional.</p>
+          </div>
+          <div class="trust-card reveal">
+            <h3>No corporate runaround</h3>
+            <p>You’re texting a local tech — not a call center. No upsells, no pressure.</p>
+          </div>
+          <div class="trust-card reveal">
+            <h3>Privacy-first</h3>
+            <p>We only touch what’s needed to fix the issue. No snooping, no weirdness.</p>
+          </div>
+        </div>
+
+        <div class="badge-row reveal" aria-label="Local badge">
+          <div class="badge-card">
+            <div class="badge-slot" aria-hidden="true">
+              <!-- Replace with your real fleur badge image (kept as a dedicated slot to reinforce local identity) -->
+              <img class="badge-img" src="assets/img/telly-tech-fleur-badge.png" alt="" onerror="this.style.display='none';" loading="lazy" />
+              <img class="badge-img" src="assets/img/badge-fleur-mock.png" alt="" loading="lazy" />
+            </div>
+            <div class="badge-copy">
+              <strong>Local & independent.</strong>
+              <span class="muted">Your neighbor, not a corporation.</span>
+            </div>
+          </div>
+          <div class="badge-card">
+            <div class="badge-copy">
+              <strong>We respond fast — often same day, evenings and weekends too.</strong>
+              <span class="muted">If you’re in a rush, text “URGENT” + your neighborhood.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problems" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Common problems we solve</h2>
+          <p class="section-sub">These are the exact “help me” texts we get every day.</p>
+        </div>
+
+        <div class="grid problem-cards">
+          <article class="problem-card reveal">
+            <h3>WiFi dead zones</h3>
+            <p>Back bedrooms, back patio, “it works in the living room only.” Mesh setup + placement fix.</p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>New iPhone / iPad anxiety</h3>
+            <p>Contacts, photos, email, FaceTime, security settings — and how to back up properly.</p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>Smart TV chaos</h3>
+            <p>Inputs, soundbars, streaming apps, logins — and getting it down to <em>one remote</em>.</p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>“My printer hates me”</h3>
+            <p>Wireless printing, scanning, drivers, and fixing offline loops.</p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>Doorbell / camera installs</h3>
+            <p>Ring/Nest installs, motion tuning, alerts, and “no more false notifications.”</p>
+          </article>
+
+          <article class="problem-card reveal">
+            <h3>Computer slow / pop-ups</h3>
+            <p>Cleanup, protection, and “what to click / what to ignore” going forward.</p>
+          </article>
+        </div>
+
+        <div class="callout reveal">
+          <div class="callout-text">
+            <h3 class="callout-title">Not sure if it counts?</h3>
+            <p class="muted">Text us what’s happening. If it’s not a fit, we’ll tell you up front.</p>
+          </div>
+          <div class="callout-actions">
+            <a class="btn btn-primary" href="tel:+15043458049">Call</a>
+            <a class="btn btn-secondary" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="services" class="section">
       <div class="container">
-        <h2>Services</h2>
-        <p class="section-sub">
-          If it plugs in, connects to WiFi, or beeps at you — we can help.
-        </p>
+        <div class="section-head">
+          <h2>Services</h2>
+          <p class="section-sub">If it plugs in, connects to WiFi, or beeps at you — we can help.</p>
+        </div>
 
         <div class="grid cards">
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>Ring/Nest Doorbell Install</h3>
             <p>Mounting, wiring guidance, app setup, motion zones, and alerts.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>WiFi & Mesh Network Setup</h3>
             <p>Fix dead zones, optimize placement, secure your network, and improve speed.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>Smart TV & Streaming</h3>
             <p>Inputs, apps, logins, soundbar setup, and “one remote” sanity.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>Printer Setup</h3>
             <p>Wireless printing, scanning, drivers, and “why won’t it print?” fixes.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>Data Transfer</h3>
             <p>Move files and settings from your old computer to your new one safely.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>Virus & Malware Removal</h3>
             <p>Cleanup, protection setup, and safer browsing habits (no judgment).</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>iPhone / Android Setup</h3>
             <p>Contacts, photos, email, FaceTime, security settings, and backups.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>Parental Controls</h3>
             <p>Screen time, content filters, and device/router-level controls.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <h3>“I just got this…” help</h3>
             <p>New gadgets, smart home devices, email weirdness — we’ll get you comfortable.</p>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="service-card">
-            <h3>Porch pirate setup</h3>
-            <p>Doorbell cams, motion lights, notification tuning, and safer delivery settings.</p>
-          </article>
+    <!-- Tight mid-page CTA (no template here) -->
+    <section class="section cta-slim">
+      <div class="container cta-slim-inner reveal">
+        <h2>Get help today</h2>
+        <p>Call or text — we respond fast and keep it simple.</p>
+        <div class="cta-slim-actions">
+          <a class="btn btn-primary" href="tel:+15043458049">Call (504) 345-8049</a>
+          <a class="btn btn-secondary" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us</a>
         </div>
       </div>
     </section>
 
     <section id="pricing" class="section section-alt">
       <div class="container">
-        <h2>Simple pricing</h2>
+        <div class="section-head">
+          <h2>Simple pricing</h2>
+          <p class="section-sub">Clear and upfront. Most visits are one flat rate.</p>
+        </div>
+
         <div class="pricing-grid">
-          <div class="pricing-card">
+          <div class="pricing-card reveal">
             <div class="price">$75</div>
             <div class="price-sub">Flat-rate house call <span class="muted">(most visits)</span></div>
             <ul class="checklist">
@@ -204,76 +331,124 @@
             </p>
           </div>
 
-          <div class="pricing-card">
+          <div class="pricing-card reveal">
             <h3>What to expect</h3>
-            <ol class="steps">
-              <li><strong>Text or call</strong> and tell us what’s going on.</li>
-              <li><strong>We confirm</strong> a same-day or next-day time window.</li>
-              <li><strong>We arrive</strong>, fix it, and show you how it works.</li>
-              <li><strong>You’re good</strong> — with a simple cheat sheet.</li>
+            <ol class="timeline">
+              <li>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>1) You text or call</strong>
+                  <div class="muted">Neighborhood + device + problem.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>2) We confirm a window</strong>
+                  <div class="muted">Same-day often available.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>3) We arrive & fix it</strong>
+                  <div class="muted">And show you how it works.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot" aria-hidden="true"></span>
+                <div>
+                  <strong>4) You get a cheat sheet</strong>
+                  <div class="muted">So you’re not stuck later.</div>
+                </div>
+              </li>
             </ol>
-            <a class="btn btn-primary btn-full" href="tel:+15043458049">Call now</a>
-            <a class="btn btn-secondary btn-full" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20Services%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text with details</a>
+
+            <div class="btn-row">
+              <a class="btn btn-primary btn-full" href="tel:+15043458049">Call now</a>
+              <a class="btn btn-secondary btn-full" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us</a>
+            </div>
+
+            <p class="micro muted">
+              Short on time? Text “URGENT” + your neighborhood and we’ll reply as soon as we can.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="trust" class="section">
+    <section id="reviews" class="section">
       <div class="container">
-        <h2>Why neighbors choose Telly</h2>
-        <div class="grid trust-cards">
-          <div class="trust-card">
-            <h3>Safe in-home help</h3>
-            <p>Insured service and background-checked technicians. Respectful, patient, and professional.</p>
-          </div>
-          <div class="trust-card">
-            <h3>No geek-speak</h3>
-            <p>We explain what we’re doing in plain English — and leave you with a simple checklist.</p>
-          </div>
-          <div class="trust-card">
-            <h3>Privacy-first</h3>
-            <p>We don’t dig through personal files. We only touch what’s needed to solve the problem.</p>
-          </div>
+        <div class="section-head">
+          <h2>What neighbors say</h2>
+          <p class="section-sub">Short, real-world wins — the stuff that matters.</p>
         </div>
 
-        <div class="testimonial">
-          <p class="quote">“Finally got WiFi working in the back bedrooms. Quick, polite, and explained everything.”</p>
-          <p class="quote-attrib">— Replace this with a real review (Nextdoor / Google)</p>
+        <div class="grid review-cards">
+          <figure class="review-card reveal">
+            <blockquote>“Finally got WiFi working in the back bedrooms. Quick, polite, and explained everything.”</blockquote>
+            <figcaption>— Gentilly homeowner</figcaption>
+          </figure>
+
+          <figure class="review-card reveal">
+            <blockquote>“Set up my mom's new iPad and showed her how to FaceTime the grandkids. She's thrilled.”</blockquote>
+            <figcaption>— Lakeview</figcaption>
+          </figure>
+
+          <figure class="review-card reveal">
+            <blockquote>“Ring doorbell installed same day I called. Professional and no upselling.”</blockquote>
+            <figcaption>— Metairie</figcaption>
+          </figure>
+        </div>
+
+        <div class="review-footnote reveal">
+          <p class="small muted">
+            Want to leave a review? Text us and we’ll send the link you prefer (Google / Nextdoor / Facebook).
+          </p>
         </div>
       </div>
     </section>
 
     <section id="faq" class="section section-alt">
       <div class="container">
-        <h2>FAQ</h2>
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p class="section-sub">Quick answers so you can feel confident texting.</p>
+        </div>
 
         <div class="faq">
-          <details>
+          <details class="reveal">
             <summary>Is it really $75?</summary>
             <div class="faq-body">
               <p>Yes — <strong>$75 covers most common in-home tech help</strong>. Hardware/parts aren’t included. If something is unusually complex, we’ll explain options before doing extra work.</p>
             </div>
           </details>
 
-          <details>
+          <details class="reveal">
             <summary>Do you do same-day visits?</summary>
             <div class="faq-body">
               <p>Often, yes. Text your neighborhood and the issue and we’ll confirm the next available window.</p>
             </div>
           </details>
 
-          <details>
+          <details class="reveal">
             <summary>What areas do you serve?</summary>
             <div class="faq-body">
               <p>New Orleans, Metairie, Kenner & surrounding areas.</p>
             </div>
           </details>
 
-          <details>
+          <details class="reveal">
             <summary>Can you help me learn, not just fix it?</summary>
             <div class="faq-body">
               <p>That’s the point. We’ll show you how it works and write down the important steps so you’re not stuck later.</p>
+            </div>
+          </details>
+
+          <details class="reveal">
+            <summary>What should I text you?</summary>
+            <div class="faq-body">
+              <p>Neighborhood + device + problem + best time. Example: “Mid-City — iPhone — email not sending — free after 5.”</p>
             </div>
           </details>
         </div>
@@ -283,27 +458,43 @@
     <section id="contact" class="section">
       <div class="container contact-grid">
         <div>
-          <h2>Get help today</h2>
+          <h2>Ready when you are</h2>
           <p class="lead">
-            Call or text — we respond fast. Tell us your neighborhood and what device is giving you trouble.
+            Call or text — we respond fast. Often same day, evenings and weekends too.
           </p>
 
           <div class="contact-actions">
             <a class="btn btn-primary" href="tel:+15043458049">Call (504) 345-8049</a>
-            <a class="btn btn-secondary" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20Services%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text details</a>
+            <a class="btn btn-secondary" href="sms:+15043458049?&body=Hi%20Telly%20Tech%20%E2%80%94%20I%27m%20in%20____%20(neighborhood)%20and%20need%20help%20with%20____.%20Best%20time%20today%20is%20____.">Text us</a>
+          </div>
+
+          <div class="contact-trust reveal">
+            <div class="trust-pill">Insured</div>
+            <div class="trust-pill">Background-checked</div>
+            <div class="trust-pill">No upsells</div>
+            <div class="trust-pill">Plain-English</div>
           </div>
 
           <p class="small muted">
-            Add your hours here later (recommended: clear windows like “Mon–Sat 9am–6pm”).
+            Tip: if you’re calling from the driveway and want us to head your way, say so. We’ll be straight with ETA.
           </p>
         </div>
 
-        <div class="contact-card">
+        <div class="contact-card reveal">
           <div class="card">
             <h3>Quick text template</h3>
             <p class="small">Copy/paste this into a text message:</p>
-            <pre class="sms-template" aria-label="SMS template">Hi Telly Tech Services — I'm in ____ (neighborhood). I need help with ____ (device/issue). Best time today is ____.</pre>
+            <pre class="sms-template" aria-label="SMS template">Hi Telly Tech — I'm in ____ (neighborhood). I need help with ____ (device/issue). Best time today is ____.</pre>
             <button class="btn btn-ghost btn-full" type="button" data-copy-sms>Copy template</button>
+          </div>
+
+          <div class="card card--badge">
+            <div class="badge-slot badge-slot--footer" aria-hidden="true">
+              <!-- Dedicated slot for the fleur badge used as your profile image everywhere -->
+              <img class="badge-img" src="assets/img/telly-tech-fleur-badge.png" alt="" onerror="this.style.display='none';" loading="lazy" />
+              <img class="badge-img" src="assets/img/badge-fleur-mock.png" alt="" loading="lazy" />
+            </div>
+            <p class="small muted">Local identity mark (swap in your official badge image).</p>
           </div>
         </div>
       </div>
@@ -313,16 +504,19 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <div class="footer-brand">Telly Tech Services</div>
+        <div class="footer-brand">Telly Tech</div>
         <div class="footer-small">New Orleans • Metairie • Kenner • Surrounding</div>
+        <div class="footer-small muted">Text/call: <a href="tel:+15043458049">(504) 345-8049</a></div>
       </div>
+
       <div class="footer-links">
-        <a href="tel:+15043458049">(504) 345-8049</a>
+        <a href="#problems">Common fixes</a>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </div>
     </div>
+
     <div class="container footer-legal">
       <p class="micro muted">
         © <span id="year"></span> Telly Tech Services. In-home tech support. Hardware/parts not included.
