@@ -14,9 +14,17 @@
   --max:1100px;
 }
 
+/* --- CORE RESETS (Fixed) --- */
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-img{max-width:100%; height:auto}
+
+/* This combines both rules correctly: */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
 body{
   min-height:100vh;
   color:var(--text);
@@ -31,7 +39,6 @@ body{
 
 a{color:inherit;text-decoration:none}
 a:hover{opacity:.95}
-img{max-width:100%;display:block}
 
 .container{width:min(100% - 32px, var(--max)); margin-inline:auto}
 .anchor{display:block;position:relative;top:-90px}
@@ -83,7 +90,11 @@ body::before{
   position:relative;
 }
 .brand-mark--fallback .brand-fallback{display:block}
-.brand-logo{width:100%; height:100%; max-width:44px; max-height:44px; object-fit:contain; padding:2px; display:block}
+.brand-logo{
+  width:100%; height:100%; 
+  max-width:44px; max-height:44px; 
+  object-fit:contain; padding:2px; display:block;
+}
 .brand-fallback{display:none; font-weight:900; letter-spacing:.06em; color:var(--gold2)}
 .brand-name{font-weight:850; letter-spacing:.01em}
 .brand-tag{font-size:.88rem; color:var(--muted)}
